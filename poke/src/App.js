@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+// mock lista pockemons
+const mockPokemonList = [
+  { name: 'Bulbasaur', url: 'bulbasaur.com' },
+  { name: 'Charmander', url: 'charmander.com' },
+  { name: 'Squirtle', url: 'squirtle.com' },
+];
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <section className="pokemon-list-container">
+        <h2>Pokemon List</h2>
+        <ul className="pokemon-list">
+          {
+            mockPokemonList.map(p => (
+              <li key={p.name}>
+                <button className="pokemon-list-item">
+                  {p.name}
+                </button>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
     );
   }
 }
