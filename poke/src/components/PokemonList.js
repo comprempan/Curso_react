@@ -23,4 +23,5 @@ export const PokemonList = (props) => {
 
 PokemonList.propTypes = {
     pokemonList: PropTypes.array.isRequired,
+    onClick: PropTypes.func
 };
