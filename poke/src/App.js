@@ -12,6 +12,11 @@ const mockPokemonList = [
 class App extends Component {
   constructor(props) {
     super(props);
+    this.selectPokemon = this.selectPokemon.bind(this);
+  }
+
+  selectPokemon() {
+    console.log("vamos a seleccionar un pokemon de la lista");
   }
 
   render() {
