@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   render() {
-    return <PokemonList pokemonList={mockPokemonList}/>
+    return <PokemonList pokemonList={mockPokemonList} onClick={this.selectPokemon}/>
   }
 }
 
