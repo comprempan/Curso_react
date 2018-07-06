@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const PokemonList = (props) => {
   return (
@@ -9,7 +10,7 @@ export const PokemonList = (props) => {
             props.pokemonList.map(pokemon => (
               <li key={pokemon.name}>
                   <button className="pokemon-list-item">
-                  {pokemon.name};
+                    {pokemon.name}
                   </button>
               </li>
               ))
@@ -19,3 +20,6 @@ export const PokemonList = (props) => {
   );
 }
 
+PokemonList.propTypes = {
+    pokemonList: PropTypes.array.isRequired,
+};
