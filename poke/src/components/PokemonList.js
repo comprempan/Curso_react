@@ -10,7 +10,7 @@ export const PokemonList = (props) => {
             props.pokemonList.map(pokemon => (
               <li key={pokemon.name}>
                   <button className="pokemon-list-item"
-                    onClick={props.onClick}>
+                    onClick={() => props.onClick(pokemon.name)}>
                     {pokemon.name}
                   </button>
               </li>

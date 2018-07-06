@@ -12,11 +12,16 @@ const mockPokemonList = [
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      selectedPokemon: mockPokemonList[0]
+    }
     this.selectPokemon = this.selectPokemon.bind(this);
   }
 
-  selectPokemon() {
-    console.log("vamos a seleccionar un pokemon de la lista");
+  selectPokemon(name) {
+    this.setState({
+      selectedPokemon: mockPokemonList.find((pokemon) => pokemon.name === name)
+    });
   }
 
   render() {
