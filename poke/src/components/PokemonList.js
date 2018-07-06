@@ -21,6 +21,10 @@ export const PokemonList = (props) => {
   );
 }
 
+PokemonList.defaultProps = {
+    onItemClick: () => {},
+};
+
 PokemonList.propTypes = {
     pokemonList: PropTypes.array.isRequired,
     onClick: PropTypes.func
